@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <script type="module" crossorigin src="/myWeather/assets/index-t7Qbd8jf.js"></script>
+    <link rel="stylesheet" crossorigin href="/myWeather/assets/index-PbidYWrH.css">
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form" class="mb-3">
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="search"
+              placeholder="Escribe el nombre de una ciudad"
+              class="form-control"
+              id="city-input"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Buscar"
+              class="btn btn-primary w-100"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <h1 id="city"></h1>
+          <strong id="temperature"></strong>
+          <span class="units"> °C</span>
+          <div class="row">
+            <div >
+              <img src="" alt="Clear" id="icon" class="float-left" />
+            </div>
+            <div id=datos >
+              <h6><span id="date"></span></h6>
+              <h6>Humedad: <span id="humidity"></span>%</h6>
+              <h6>Viento: <span id="wind"></span> km/h</h6>
+            </div>
+          </div>
+          <hr>
+          <div class="weather-forecast" id="forecast"></div>
+        
+        <small>
+          <a
+            href="https://github.com/jotad9"
+            target="_blank"
+            >Hecho </a
+          >
+          by Juan Daniel
+        </small>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
