@@ -26,6 +26,7 @@ function formatDay(timestamp) {
 
     return days[day];
 }
+
 function mapWeatherIcon(apiIcon) {
     // Mapea los valores de la API a tus rutas de imágenes personalizadas
     const iconMapping = {
@@ -44,11 +45,12 @@ function mapWeatherIcon(apiIcon) {
     // Devuelve la ruta de la imagen personalizada o una ruta predeterminada
     return iconMapping[apiIcon] || "./assets/images/default.png";
 }
+
 function displayForecast(response) {
     let forecast = response.data.daily;
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML = `<div class="row">`;
-    
+
     forecast.forEach(function (forecastDay, index) {
         if (index < 5) {
             forecastHTML =
@@ -124,7 +126,9 @@ function search(city) {
         units: "metric"
     };
 
-    axios.get(apiUrl, { params })
+    axios.get(apiUrl, {
+            params
+        })
         .then(response => displayTemperature(response))
         .catch(error => {
             console.error("Error fetching weather data:", error);
@@ -142,3 +146,43 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Madrid");
+
+
+
+// Colores
+
+let color = document.querySelector("#colores");
+let links = color.querySelectorAll("a")
+
+function changeColor() {
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function () {
+            switch(links[i].id){
+                case "morado":
+                    document.body.style.background = "linear-gradient(135deg, #d03fe6, #427ec7)";
+                    break;
+                case "azul":
+                    document.body.style.background = "linear-gradient(135deg, #3a7bd5, #3a6073)";
+                    break;
+                case "verde":
+                    document.body.style.background = "linear-gradient(135deg, #6ce891, #427ec7)";
+                    break;
+                case "rojo":
+                    document.body.style.background = "linear-gradient(135deg, #ea1919, #3c45f2)";
+                    break;
+                case "amarillo":
+                    document.body.style.background = "linear-gradient(135deg, #ffcc00, #b38f00)";
+                    break;
+                case "naranja":
+                    document.body.style.background = "linear-gradient(135deg, #ff6600, #b34700)";
+                    break;
+                case "rosa":
+                    document.body.style.background = "linear-gradient(135deg,  #ff0080, #d03fe6)";
+                    break;
+            }
+            
+        });
+    }
+}
+
+changeColor();

@@ -15,6 +15,36 @@
     <title>Weather App</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light " id="navbar">
+      <a class="navbar-brand">MyWeather</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" id="colores">
+          <li class="nav-item" >
+            <a class="nav-link ml-2" id="morado">
+              <img src="public/assets/images/morado.png" width="25" height="25"/>
+            </a>
+          </li>
+          <li class="nav-item" >
+            <a class="nav-link" id="verde">
+              <img src="public/assets/images/verde.png" width="25" height="25"/>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="rojo">
+              <img src="public/assets/images/rojo.jpg" width="25" height="25"/>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="rosa">
+              <img src="public/assets/images/rosa.jpg" width="25" height="25"/>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <form id="search-form" class="mb-3">
         <div class="row">
@@ -29,13 +59,13 @@
           </div>
           <div class="col-3">
             <input
+              id="search-button"
               type="submit"
               value="Buscar"
               class="btn btn-primary w-100"
             />
           </div>
         </div>
-      </form>
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <h1 id="city"></h1>
@@ -57,9 +87,7 @@
         <small>
           <a
             href="https://github.com/jotad9"
-            target="_blank"
-            >Hecho </a
-          >
+            target="_blank">Hecho</a>
           by Juan Daniel
         </small>
       </div>
